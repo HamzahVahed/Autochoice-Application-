@@ -1,0 +1,60 @@
+object DataModule2: TDataModule2
+  OldCreateOrder = False
+  Height = 265
+  Width = 426
+  object ADOConnection1: TADOConnection
+    Connected = True
+    ConnectionString = 
+      'Provider=Microsoft.Jet.OLEDB.4.0;User ID=Admin;Data Source=C:\Us' +
+      'ers\Vahed\Desktop\ITPAT 2020\Cars.mdb;Mode=ReadWrite;Persist Sec' +
+      'urity Info=False;Jet OLEDB:System database="";Jet OLEDB:Registry' +
+      ' Path="";Jet OLEDB:Database Password="";Jet OLEDB:Engine Type=5;' +
+      'Jet OLEDB:Database Locking Mode=1;Jet OLEDB:Global Partial Bulk ' +
+      'Ops=2;Jet OLEDB:Global Bulk Transactions=1;Jet OLEDB:New Databas' +
+      'e Password="";Jet OLEDB:Create System Database=False;Jet OLEDB:E' +
+      'ncrypt Database=False;Jet OLEDB:Don'#39't Copy Locale on Compact=Fal' +
+      'se;Jet OLEDB:Compact Without Replica Repair=False;Jet OLEDB:SFP=' +
+      'False'
+    LoginPrompt = False
+    Mode = cmReadWrite
+    Provider = 'Microsoft.Jet.OLEDB.4.0'
+    Left = 56
+    Top = 72
+  end
+  object ADOTable1: TADOTable
+    Active = True
+    Connection = ADOConnection1
+    CursorType = ctStatic
+    TableName = 'Cars'
+    Left = 184
+    Top = 72
+  end
+  object DataSource1: TDataSource
+    DataSet = ADOTable1
+    Left = 304
+    Top = 72
+  end
+  object ADOConnection2: TADOConnection
+    Connected = True
+    ConnectionString = 
+      'Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:\Users\Vahed\Desk' +
+      'top\ITPAT 2020\Cars.mdb;Mode=ReadWrite;Persist Security Info=Fal' +
+      'se'
+    LoginPrompt = False
+    Mode = cmReadWrite
+    Provider = 'Microsoft.Jet.OLEDB.4.0'
+    Left = 64
+    Top = 176
+  end
+  object ADOTable2: TADOTable
+    Connection = ADOConnection2
+    TableName = 'Customer'
+    Left = 184
+    Top = 168
+  end
+  object DataSource2: TDataSource
+    DataSet = ADOTable2
+    Left = 304
+    Top = 168
+  end
+end

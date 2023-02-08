@@ -1,0 +1,29 @@
+object DataModule2: TDataModule2
+  OldCreateOrder = False
+  Height = 265
+  Width = 426
+  object ADOConnection1: TADOConnection
+    Connected = True
+    ConnectionString = 
+      'Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:\Users\Vahed\Desk' +
+      'top\ITPAT 2020\Cars.mdb;Persist Security Info=False'
+    LoginPrompt = False
+    Mode = cmShareDenyNone
+    Provider = 'Microsoft.Jet.OLEDB.4.0'
+    Left = 56
+    Top = 72
+  end
+  object ADOTable1: TADOTable
+    Active = True
+    Connection = ADOConnection1
+    CursorType = ctStatic
+    TableName = 'Cars'
+    Left = 184
+    Top = 72
+  end
+  object DataSource1: TDataSource
+    DataSet = ADOTable1
+    Left = 304
+    Top = 72
+  end
+end
